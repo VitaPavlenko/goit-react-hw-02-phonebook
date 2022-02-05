@@ -1,12 +1,17 @@
-// class Filter extends Component {
-//     state = {
+import PropTypes from "prop-types";
 
-//     }
-//   render() {
-//     return (
+const Filter = ({ filter, handleFilter }) => {
+  return (
+    <label>
+      Find contacts by name
+      <input type="text" value={filter} onChange={handleFilter}></input>
+    </label>
+  );
+};
 
-//     );
-//   }
-// }
+Filter.propTypes = {
+  filter: PropTypes.string,
+  handleFilter: PropTypes.func,
+};
 
-// export default Filter;
+export default Filter;
